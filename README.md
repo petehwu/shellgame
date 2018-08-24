@@ -2,6 +2,8 @@
 
 ## Table of Contents
 * [Installation](#installation)
+* [Limitations](#limitations and caveats)
+* [Usage](#usage)
 * [Submissions](#submissions)
 
 ## Installation
@@ -10,7 +12,7 @@ Clone the shellgame repo:
    - `git clone git@github.com:petehwu/shellgame.git` (SSH)
 
 ## Limitations and caveats
-1.  you should issue the git clone command from your home directory, otherwise the code will not work directly.  
+1.  you should issue the git clone command from your home directory, otherwise the code will not work correctly.  
 2. The comparison is done by issuing a command to the sh shell and capturing the output in a file, then issuing the same command to your shell and capturing the output, then performing a diff on the 2 files to check for differences.  This means that your prompt character has to be the same as the prompt for sh('$' by default) othewise diff will show that as a difference.  
 3. I added a sort step before diff to sort the output files because I noticed some differences in display order.  Not sure if this is right or not.
 
