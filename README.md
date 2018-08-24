@@ -2,7 +2,7 @@
 
 ## Table of Contents
 * [Installation](#installation)
-* [Limitations](#limitations)
+* [Limitations](#limitations-and-caveats)
 * [Usage](#usage)
 * [Submissions](#submissions)
 
