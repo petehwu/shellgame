@@ -16,7 +16,7 @@ Clone the shellgame repo:
 2. The comparison is done by issuing a command to the sh shell and capturing the output in a file, then issuing the same command to your shell and capturing the output, then performing a diff on the 2 files to check for differences.  This means that your prompt character has to be the same as the prompt for sh('$' by default) othewise diff will show that as a difference.  
 3. I added a sort step before diff to sort the output files because I noticed some differences in display order.  Not sure if this is right or not.
 
-##Usage
+## Usage
 1. Change your directory to shell game `cd shellgame`
 2. Start the test suite: `./init.sh [github username of simple_shell repo]`
 3. The test will dispaly Pass/Fail twice, the first one is checking for expected output(stdout), the second pass/fail is for checking expected error(stderr)
