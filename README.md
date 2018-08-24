@@ -5,11 +5,19 @@
 * [Submissions](#submissions)
 
 ## Installation
-1. Clone the shellgame repo:
-   - `git clone https://github.com/srinitude/shellgame.git` (HTTPS)
-   - `git clone git@github.com:srinitude/shellgame.git` (SSH)
-2. Change your working directory to shellgame: `cd shellgame`
-3. Start the test suite: `./init.sh [your github username]`
+Clone the shellgame repo:
+   - `git clone https://github.com/petehwu/shellgame.gitt` (HTTPS)
+   - `git clone git@github.com:petehwu/shellgame.git` (SSH)
+
+## Limitations and caveats
+1.  you should issue the git clone command from your home directory, otherwise the code will not work directly.  
+2. The comparison is done by issuing a command to the sh shell and capturing the output in a file, then issuing the same command to your shell and capturing the output, then performing a diff on the 2 files to check for differences.  This means that your prompt character has to be the same as the prompt for sh('$' by default) othewise diff will show that as a difference.  
+3. I added a sort step before diff to sort the output files because I noticed some differences in display order.  Not sure if this is right or not.
+
+##Usage
+1. Change your directory to shell game `cd shellgame`
+2. Start the test suite: `./init.sh [github username of simple_shell repo]`
+3. The test will dispaly Pass/Fail twice, the first one is checking for expected output(stdout), the second pass/fail is for checking expected error(stderr)
 
 ## Submissions
 Before adding test cases, follow this procedure so that the master branch doesn't get corrupted:

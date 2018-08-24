@@ -18,7 +18,9 @@ function check_output()
 
 function diff_output()
 {
-    diff "$YOUR_OUTPUT" "$EXPECTED_OUTPUT" > "$OUTPUT_DIFF"
+    sort "$YOUR_OUTPUT" > "$YOUR_OUTPUT_SORTED"
+    sort "$EXPECTED_OUTPUT" > "$EXPECTED_OUTPUT_SORTED"
+    diff "$YOUR_OUTPUT_SORTED" "$EXPECTED_OUTPUT_SORTED" > "$OUTPUT_DIFF"
 }
 
 function check_error()
@@ -28,8 +30,11 @@ function check_error()
 }
 
 function diff_error()
-{
-    diff "$YOUR_ERROR" "$EXPECTED_ERROR" > "$ERROR_DIFF"
+{ 
+    sort "$YOUR_ERROR" > "$YOUR_ERROR_SORTED"
+    sort "$EXPECTED_ERROR" > "$EXPECTED_ERROR_SORTED"
+    diff "$YOUR_ERROR_SORTED" "$EXPECTED_ERROR_SORTED" > "$ERROR_DIFF"
+
 }
 
 function print_diff()
@@ -59,6 +64,8 @@ function clean_up()
 {
     > "$YOUR_OUTPUT" && > "$EXPECTED_OUTPUT"
     > "$YOUR_ERROR" && > "$EXPECTED_ERROR"
+    > "$YOUR_OUTPUT_SORTED" && > "$EXPECTED_OUTPUT_SORTED"
+    > "$YOUR_ERROR_SORTED" && > "$EXPECTED_ERROR_SORTED"
     > "$OUTPUT_DIFF" && > "$ERROR_DIFF"
     rm -f "$HOME"/.simple_shell_history
     rm -f "$LTRACEOUTPUTFILE"
