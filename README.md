@@ -8,7 +8,7 @@
 
 ## Installation
 Clone the shellgame repo:
-   - `git clone https://github.com/petehwu/shellgame.gitt` (HTTPS)
+   - `git clone https://github.com/petehwu/shellgame.git` (HTTPS)
    - `git clone git@github.com:petehwu/shellgame.git` (SSH)
 
 ## Limitations and caveats
